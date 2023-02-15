@@ -187,15 +187,23 @@ themeButton.addEventListener("click", () => {
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbyzhfl2y68ebztiXXDcR-rkG1eoHwf3ZKqZ0r9v27Rj_yHj3p2iJBdf6xKWMjMBo7h0/exec";
 const form = document.forms["submit-to-google-sheet"];
-const alert = document.getElementsByClassName("alert");
+const alert = document.querySelector(".alert");
+const btnCloseAlert = document.querySelector(".alert-icon");
+const loading = document.querySelector(".loading");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  loading.classList.toggle("none");
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
+      loading.classList.toggle("none");
       alert.classList.toggle("alert-none");
       form.reset();
       console.log("Success!", response);
     })
     .catch((error) => console.error("Error!", error.message));
+});
+
+btnCloseAlert.addEventListener("click", function () {
+  alert.classList.add("alert-none");
 });

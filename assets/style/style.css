@@ -154,6 +154,7 @@ img {
 .btn {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 /* REUSABLE CSS CLASSES */
@@ -828,6 +829,9 @@ img {
 }
 
 /* CONTACT ME */
+.contact {
+  position: relative;
+}
 
 .contact-container {
   row-gap: 3rem;
@@ -888,6 +892,11 @@ img {
   color: rgb(6, 115, 15);
 }
 
+.alert p {
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+}
+
 .alert-icon {
   font-size: 2rem;
   cursor: pointer;
@@ -895,6 +904,41 @@ img {
 
 .alert-none {
   display: none;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9995;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-loading {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-top: 14px solid var(--first-color);
+  border-bottom: 14px solid var(--first-color);
+  animation: 1.5s spin infinite linear;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* FOOTER */
