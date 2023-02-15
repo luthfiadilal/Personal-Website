@@ -565,27 +565,33 @@
             </div>
           </div>
 
-          <form action="" class="contact-form grid">
+          <form action="" class="contact-form grid" name="submit-to-google-sheet">
+            <div class="alert alert-none">
+              <p>Terimakasih pesan anda sudah kami terima</p>
+              <i class="uil uil-times alert-icon"></i>
+            </div>
             <div class="contact-inputs grid">
               <div class="contact-content">
                 <label for="" class="contact-label">Name</label>
-                <input type="text" class="contact-input" />
+                <input type="text" class="contact-input" name="nama" />
               </div>
               <div class="contact-content">
                 <label for="" class="contact-label">Email</label>
-                <input type="email" class="contact-input" />
+                <input type="email" class="contact-input" name="email" />
               </div>
             </div>
             <div class="contact-content">
               <label for="" class="contact-label">Message</label>
-              <textarea name="" id="" cols="0" rows="7" class="contact-input"></textarea>
+              <textarea name="pesan" id="" cols="0" rows="7" class="contact-input"></textarea>
             </div>
 
             <div>
-              <a href="#" class="button button--flex">
-                Send Message
-                <i class="uil uil-message button-icon"></i>
-              </a>
+              <button type="submit" class="btn">
+                <a class="button button--flex">
+                  Send Message
+                  <i class="uil uil-message button-icon"></i>
+                </a>
+              </button>
             </div>
           </form>
         </div>

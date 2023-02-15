@@ -182,3 +182,20 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// SUBMIT TO GOOGLE FORM
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbyzhfl2y68ebztiXXDcR-rkG1eoHwf3ZKqZ0r9v27Rj_yHj3p2iJBdf6xKWMjMBo7h0/exec";
+const form = document.forms["submit-to-google-sheet"];
+const alert = document.getElementsByClassName("alert");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      alert.classList.toggle("alert-none");
+      form.reset();
+      console.log("Success!", response);
+    })
+    .catch((error) => console.error("Error!", error.message));
+});

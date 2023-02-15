@@ -151,6 +151,11 @@ img {
   height: auto;
 }
 
+.btn {
+  background: none;
+  border: none;
+}
+
 /* REUSABLE CSS CLASSES */
 
 .section {
@@ -870,6 +875,26 @@ img {
   border-bottom: 1px solid var(--border-bottom-color);
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.alert {
+  padding: 1rem;
+  background-color: rgb(128, 198, 135);
+  border: 2px solid rgb(6, 115, 15);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(6, 115, 15);
+}
+
+.alert-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.alert-none {
+  display: none;
 }
 
 /* FOOTER */
