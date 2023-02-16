@@ -825,7 +825,7 @@ img {
 .project-img {
   width: 232px;
   justify-self: center;
-  border-radius: 0.7rem 0.7rem 0 0;
+  border-radius: 0.5rem;
 }
 
 /* CONTACT ME */
@@ -1092,6 +1092,7 @@ img {
 
   .project-img {
     width: 200px;
+    border-radius: 0.5rem;
   }
 }
 
@@ -1127,6 +1128,10 @@ img {
     display: grid;
     grid-template-columns: 0.6fr;
     justify-content: center;
+  }
+
+  .project-img {
+    border-radius: 0.5rem;
   }
 }
 
@@ -1339,5 +1344,9 @@ img {
 
   .contact-inputs {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-img {
+    border-radius: 0.5rem 0.5rem 0 0;
   }
 }
